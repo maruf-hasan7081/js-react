@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.slideshow_container {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow_elements {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slideshow_element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow_element i {
+  font-size: 70px;
+  margin-bottom: 20px;
+  color: #00ffcc;
+}
+
+/* Active slide visible */
+.slideshow_element.active {
+  opacity: 1;
+}
